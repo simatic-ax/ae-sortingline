@@ -1,10 +1,14 @@
 USING Simatic.Ax.WindowTracking.EventHandler;
 USING Simatic.Ax.WindowTracking;
 USING Simatic.Ax.WindowTracking.Trigger;
+USING Simatic.Ax.WindowTracking.Items;
 
 PROGRAM MainProgram
     VAR_EXTERNAL
         CreateNewWindowRequest : BOOL;
+        CreatedWindows : DINT;
+        CreatedWindowsDiff : DINT;
+        WindowsInList : DINT;
 
         TriggerPointList : VirtualTriggerList;
         WindowList : TransportWindowList;
@@ -28,14 +32,18 @@ PROGRAM MainProgram
         // Terminate Window at and of conveyor at Pos 8000
         ClearWindowTrigger : VirtualTrigger;
         terminateWindowEvent : TerminateWindowEvent;
+
+        Items : Array[0..15] OF IItem;
     END_VAR
     
     VAR
         _initialized : BOOL;    
+        _itemId : INT;
     END_VAR
 
     VAR_TEMP
         _newWindow : ITransportWindow;
+        _item : IItem;
     END_VAR
 
     IF NOT(_initialized) THEN
@@ -48,11 +56,12 @@ PROGRAM MainProgram
     END_IF;
 
     IF (CreateNewWindowRequest) THEN
-        _newWindow := WindowList.Create();
+        _itemId := (_itemId + 1) MOD 16;
+        _newWindow := WindowList.Create(Items[_itemId]);
         CreateNewWindowRequest := FALSE;
-        // 
+        CreatedWindows := CreatedWindows + 1;
     END_IF;
-
+    CreatedWindowsDiff := ClearWindowTrigger._activations - CreatedWindows;
     WindowList.Evaluate();
-    ;
+    WindowsInList := WindowList.Count();
 END_PROGRAM

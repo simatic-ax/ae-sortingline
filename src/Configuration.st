@@ -2,6 +2,7 @@ USING Simatic.Ax.WindowTracking.SortDecission;
 USING Simatic.Ax.WindowTracking;
 USING Simatic.Ax.WindowTracking.Trigger;
 USING Simatic.Ax.WindowTracking.EventHandler;
+USING Simatic.Ax.WindowTracking.Items;
 
 CONFIGURATION MyConfiguration
     TASK Main(Priority := 1);
@@ -18,7 +19,9 @@ CONFIGURATION MyConfiguration
         Enocder : EncoderMock;
         CreateNewWindowRequest : BOOL;
         SortStrategy : SortDecissionOneDestination;
-
+        CreatedWindows : DINT;
+        CreatedWindowsDiff : DINT;
+        WindowsInList : DINT;
         // Virtual Triggers:
         
         // ExitPoint101 at position 2000
@@ -35,14 +38,35 @@ CONFIGURATION MyConfiguration
         ExitPoint301Handler : SortDecissionEvent := (SortStrategy := SortStrategy, ExitHandler := Exit301);
         Exit301 : MyExitPoint;
 
-        // ExitPoint401 at position 7500
-        ExitPoint401 : VirtualTrigger := (ID := UINT#401, Position := 7500, EventHandler := ExitPoint401Handler);
+        // ExitPoint401 at position 7000
+        ExitPoint401 : VirtualTrigger := (ID := UINT#401, Position := 7000, EventHandler := ExitPoint401Handler);
         ExitPoint401Handler : SortDecissionEvent := (SortStrategy := SortStrategy, ExitHandler := Exit401);        
         Exit401 : MyExitPoint;
 
-        // Terminate Window at and of conveyor at Pos 8000
-        ClearWindowTrigger : VirtualTrigger := (ID := UINT#601, Position := 8000, EventHandler := TerminateWindowEvent);
+        // Terminate Window at and of conveyor at Pos 9000
+        ClearWindowTrigger : VirtualTrigger := (ID := UINT#601, Position := 9000, EventHandler := TerminateWindowEvent);
         TerminateWindowEvent : TerminateWindowEvent  := (WindowList := WindowList, EventAfter := TerminateCounter);
         TerminateCounter : MyEventCounter;
+
+        // Items 
+        Item00 : ItemOneDestination := (Destination1 := ExitPoint201);
+        Item01 : ItemOneDestination := (Destination1 := ExitPoint301);
+        Item02 : ItemOneDestination := (Destination1 := ExitPoint101);
+        Item03 : ItemOneDestination := (Destination1 := ExitPoint101);
+        Item04 : ItemOneDestination := (Destination1 := ExitPoint301);
+        Item05 : ItemOneDestination := (Destination1 := ExitPoint401);
+        Item06 : ItemOneDestination := (Destination1 := ExitPoint301);
+        Item07 : ItemOneDestination := (Destination1 := ExitPoint301);
+        Item08 : ItemOneDestination := (Destination1 := ExitPoint101);
+        Item09 : ItemOneDestination := (Destination1 := ExitPoint401);
+        Item10 : ItemOneDestination := (Destination1 := ExitPoint101);
+        Item11 : ItemOneDestination := (Destination1 := ExitPoint201);
+        Item12 : ItemOneDestination := (Destination1 := ExitPoint201);
+        Item13 : ItemOneDestination := (Destination1 := ExitPoint301);
+        Item14 : ItemOneDestination := (Destination1 := ExitPoint401);
+        Item15 : ItemOneDestination := (Destination1 := ExitPoint301);
+        Items : Array[0..15] OF IItem := [Item00, Item01, Item02, Item03, Item04, Item05, Item06, Item07, Item08, Item09, Item10, Item11, Item12, Item13, Item14, Item15] ;
+
+
     END_VAR
 END_CONFIGURATION

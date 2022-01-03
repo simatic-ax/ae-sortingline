@@ -2,7 +2,7 @@ USING Simatic.Ax.WindowTracking.ExitPointHandler;
 
 CLASS MyExitPoint IMPLEMENTS IExitPointHandler
     VAR
-        _CountItems : INT;
+        _ItemsSorted : INT;
     END_VAR
 
     METHOD PUBLIC IsReady : BOOL
@@ -10,7 +10,7 @@ CLASS MyExitPoint IMPLEMENTS IExitPointHandler
     END_METHOD
 
     METHOD PUBLIC Activate : BOOL
-        _CountItems := _CountItems + 1;
+        _ItemsSorted := _ItemsSorted + 1;
         
     END_METHOD
 END_CLASS
