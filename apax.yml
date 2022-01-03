@@ -28,4 +28,4 @@ devDependencies:
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 dependencies:
-  "@simatic-ax/windowtracking": 0.0.9
+  "@simatic-ax/windowtracking": 0.0.10
