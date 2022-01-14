@@ -61,7 +61,7 @@ PROGRAM MainProgram
         CreateNewWindowRequest := FALSE;
         CreatedWindows := CreatedWindows + 1;
     END_IF;
-    CreatedWindowsDiff := ClearWindowTrigger._activations - CreatedWindows;
+    //reatedWindowsDiff := ClearWindowTrigger.activations - CreatedWindows;
     WindowList.Evaluate();
     WindowsInList := WindowList.Count();
 END_PROGRAM
