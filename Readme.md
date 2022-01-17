@@ -11,15 +11,15 @@ This example shows a small example of a sorting line with 4 exits.
 ![](./doc/linelayout.png)
 ### How does it work
 
-In this example every second, a `VirtualWindow` will be created and one of 16 items in a list will be assigned to this window. Each item has one sort destination (exit point).
+In this example every second, a `TransportWindow` will be created and one of 16 items in a list will be assigned to this window. Each item has one sort destination (exit point).
 
 During the execution, a encoder will be simulated. This encoder will be incremented by 10mm every 10ms (corresponds 1m/s belt speed). In your application, the simulated encoder has to be replaced by a concrete one of type `IEncoder`.
 
-The `VirtualWindow` will be moved according the encoder values. When a `VirtualWindow` reaches a `VirtualTrigger`, it will be activated and the event handler which belongs to the `VirtualTrigger`, will be executed.
+The `TransportWindow` will be moved according the encoder values. When a `TransportWindow` reaches a `VirtualTrigger`, it will be activated and the event handler which belongs to the `VirtualTrigger`, will be executed.
 
 1. If the event handler is a `SortDecisionEvent`:
     
-    The `SortDecisionEvent` check, if the assigned item in the `VirtualWindow` is designated for the active `TriggerPoint`.
+    The `SortDecisionEvent` check, if the assigned item in the `TransportWindow` is designated for the active `TriggerPoint`.
     
     If yes, the exit handler of the `SortDecisionEvent` will be executed. In your application, you've to implement your own exit handler (e.g. if the exit is another conveyor, it has to be startup).
 
@@ -27,7 +27,7 @@ The `VirtualWindow` will be moved according the encoder values. When a `VirtualW
 
 1. If the event handler is a `TerminateWindowEvent`: 
 
-    In this case, the VirtualWindow will be terminated. That has to be done at the end of the sorting line. 
+    In this case, the TransportWindow will be terminated. That has to be done at the end of the sorting line. 
 
 
 ## Execute the Application Example (AX Code local)

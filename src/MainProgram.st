@@ -3,6 +3,7 @@ USING Simatic.Ax.WindowTracking;
 USING Simatic.Ax.WindowTracking.Trigger;
 USING Simatic.Ax.WindowTracking.Items;
 
+
 PROGRAM MainProgram
     VAR_EXTERNAL
         CreateNewWindowRequest : BOOL;
@@ -15,19 +16,19 @@ PROGRAM MainProgram
 
         // ExitPoint101 at position 2000
         ExitPoint101 : VirtualTrigger;
-        ExitPoint101Handler : SortDecissionEvent;
+        ExitPoint101Handler : SortDecisionEvent;
 
         // ExitPoint201 at position 3500
         ExitPoint201 : VirtualTrigger;
-        ExitPoint201Handler : SortDecissionEvent;
+        ExitPoint201Handler : SortDecisionEvent;
 
         // ExitPoint301 at position 5000
         ExitPoint301 : VirtualTrigger;
-        ExitPoint301Handler : SortDecissionEvent;
+        ExitPoint301Handler : SortDecisionEvent;
 
         // ExitPoint401 at position 7500
         ExitPoint401 : VirtualTrigger;
-        ExitPoint401Handler : SortDecissionEvent;
+        ExitPoint401Handler : SortDecisionEvent;
         
         // Terminate Window at and of conveyor at Pos 8000
         ClearWindowTrigger : VirtualTrigger;
@@ -57,7 +58,7 @@ PROGRAM MainProgram
 
     IF (CreateNewWindowRequest) THEN
         _itemId := (_itemId + 1) MOD 16;
-        _newWindow := WindowList.Create(Items[_itemId]);
+        _newWindow := WindowList.Create(i := Items[_itemId], offset := 0);
         CreateNewWindowRequest := FALSE;
         CreatedWindows := CreatedWindows + 1;
     END_IF;

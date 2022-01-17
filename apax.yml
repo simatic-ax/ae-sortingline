@@ -30,9 +30,9 @@ scripts:
     - apax load
 devDependencies:
   "@ax/sdk": 1.0.127
-  "@simatic-ax/snippetscollection": 0.0.4
+  "@simatic-ax/snippetscollection": 0.0.6
   "@ax/hwld": 0.4.93
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 dependencies:
-  "@simatic-ax/windowtracking": 0.0.10
+  "@simatic-ax/windowtracking": 0.0.11
