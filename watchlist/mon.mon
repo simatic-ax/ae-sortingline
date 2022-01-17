@@ -10,9 +10,7 @@ ExitPoint401._activations
 ClearWindowTrigger._activations
 
 CreatedWindows
-ClearWindowTrigger._activations
 TerminateCounter._CountItems
-CreatedWindowsDiff
 WindowsInList
 
 Exit101._ItemsSorted
