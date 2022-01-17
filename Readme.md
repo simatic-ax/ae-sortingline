@@ -81,12 +81,12 @@ The `VirtualWindow` will be moved according the encoder values. When a `VirtualW
 ## Tips and tricks
 
 ### Change the IP address for the downloader
-    
-    To change the target IP address, open the `apax.yml` and search the entry `IP_ADDRESS`, Enter the IP address for your target.
+
+To change the target IP address, open the `apax.yml` and search the entry `IP_ADDRESS`, Enter the IP address for your target.
 
 ### Change the IP address for the online debugging and monitoring
 
-    To change the IP address for the debugging, open the file `./vscode/launch.json` and search the entry `ip`, Enter the IP address for your device.
+To change the IP address for the debugging, open the file `./vscode/launch.json` and search the entry `ip`, Enter the IP address for your device.
 
 ## Contribution
 
