@@ -115,6 +115,13 @@
     "@ax/diag-linux-x64" "0.15.3"
     "@ax/diag-win-x64" "0.15.3"
 
+"@ax/hwld@0.4.93":
+  version "0.4.93"
+  resolved "https://apax-prod-734703289705.d.codeartifact.eu-central-1.amazonaws.com:443/npm/ax/@ax/hwld/-/hwld-0.4.93.tgz#8d303b681a1b19354d5ba7b5f0762315a3f094a4"
+  integrity sha512-1/GQqcK+lyzv2v96q54eo1GMFIBIQF2VfLOB9D3izs2p8N0PGqTElhkyFcbckzd3GP/12AktHIm7ebEDJOPOlg==
+  dependencies:
+    "@ax/third-party-licenses-hardware-loader" "0.4.93"
+
 "@ax/mod-linux-x64@0.15.3":
   version "0.15.3"
   resolved "https://apax-prod-734703289705.d.codeartifact.eu-central-1.amazonaws.com:443/npm/ax/@ax/mod-linux-x64/-/mod-linux-x64-0.15.3.tgz#bacbc1d0916561eb3e4ff9bbdf828039d89447e8"
@@ -335,6 +342,11 @@
   version "10.0.501"
   resolved "https://apax-prod-734703289705.d.codeartifact.eu-central-1.amazonaws.com:443/npm/ax/@ax/third-party-licenses-build-native/-/third-party-licenses-build-native-10.0.501.tgz#32574732ff16694aa54ece5f543712bd9b6e05f0"
   integrity sha512-+3jSBG7VnaarKBmu61sWfi3PJE1lZOFKD4WnP5oLQIjZLbsDhA8zeW8okYaBGtvah+pZL+qK+xkPfRdP3AJQSg==
+
+"@ax/third-party-licenses-hardware-loader@0.4.93":
+  version "0.4.93"
+  resolved "https://apax-prod-734703289705.d.codeartifact.eu-central-1.amazonaws.com:443/npm/ax/@ax/third-party-licenses-hardware-loader/-/third-party-licenses-hardware-loader-0.4.93.tgz#6e414d3f493ae00a53cd33e5feb4b0188efe893c"
+  integrity sha512-C1BbSjRPwavYUsoPzcjfSVuX8hlQf99OG94xoEjNec1yya2op9VUh0/PI5zDhm/w7rBuMlaUPLtwaTzi8r1rNQ==
 
 "@ax/third-party-licenses-monitor@0.15.3":
   version "0.15.3"

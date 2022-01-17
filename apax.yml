@@ -3,17 +3,20 @@ version: 0.0.0
 type: app
 targets:
   - "plcsim"
-  # - axunit-llvm
+  - "1500"
 variables:
   APAX_BUILD_ARGS:
     - --debug
     - --log Trace
   BIN_FOLDER: "./bin/plcsim"
+  BIN_FOLDER_HWPLC: "./bin/1500"
   IP_ADDRESS: "192.168.0.1"
   WATCHLISTS: "./watchlist"
 scripts:
   load: sld -i $BIN_FOLDER -t $IP_ADDRESS -r --accept-security-disclaimer -l debug
     --default-server-interface
+  loadhwplc: sld -i $BIN_FOLDER_HWPLC -t $IP_ADDRESS -r
+    --accept-security-disclaimer -l debug --default-server-interface
   reset: apax hwld --resetPlc:keepOnlyIP --targetIP $IP_ADDRESS
     --accept-security-disclaimer
   loadhwcn: apax hwld --input ./hwcn/MMC --targetIP $IP_ADDRESS
@@ -22,9 +25,13 @@ scripts:
   dlsim:
     - apax build
     - apax load
+  dlhwplc:
+    - apax build
+    - apax load
 devDependencies:
   "@ax/sdk": 1.0.127
   "@simatic-ax/snippetscollection": 0.0.4
+  "@ax/hwld": 0.4.93
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 dependencies:
