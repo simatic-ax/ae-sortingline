@@ -2,7 +2,7 @@ USING Simatic.Ax.SimpleControlModules;
 
 CLASS EncoderMock IMPLEMENTS IEncoder
     VAR
-        _value : DINT;
+        _value : LINT;
     END_VAR
 
     METHOD PUBLIC Evaluate
@@ -16,13 +16,13 @@ CLASS EncoderMock IMPLEMENTS IEncoder
 
     METHOD PUBLIC SetValue
         VAR_INPUT
-            value : DINT;
+            value : LINT;
         END_VAR
         _value := value;
         ;
     END_METHOD
 
-    METHOD PUBLIC GetValue : DINT
+    METHOD PUBLIC GetValue : LINT
         GetValue := _value;
     END_METHOD
 
@@ -34,7 +34,7 @@ CLASS EncoderMock IMPLEMENTS IEncoder
         ;
     END_METHOD
 
-    METHOD PUBLIC RelativeCount : DINT
+    METHOD PUBLIC RelativeCount : LINT
         ;
     END_METHOD
 
@@ -42,7 +42,7 @@ CLASS EncoderMock IMPLEMENTS IEncoder
         ;
     END_METHOD
 
-    METHOD PUBLIC GetModulo : DINT
+    METHOD PUBLIC GetModulo : LINT
         GetModulo := 4096;
     END_METHOD
 END_CLASS

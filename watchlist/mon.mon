@@ -1,6 +1,13 @@
 WindowList._head
 WindowList._tail
+WindowList._tranportWindowListStorage[0]._actualPos
+WindowList._tranportWindowListStorage[5]._actualPos
 WindowList._tranportWindowListStorage[10]._actualPos
+WindowList._tranportWindowListStorage[15]._actualPos
+WindowList._tranportWindowListStorage[20]._actualPos
+WindowList._tranportWindowListStorage[25]._actualPos
+WindowList._tranportWindowListStorage[30]._actualPos
+WindowList._tranportWindowListStorage[35]._actualPos
 Enocder._value
 
 ExitPoint101._activations
