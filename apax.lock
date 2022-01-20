@@ -375,10 +375,10 @@
   dependencies:
     "@ax/system-timer" "1.0.12"
 
-"@simatic-ax/simple-control-modules@0.0.5":
-  version "0.0.5"
-  resolved "https://npm.pkg.github.com/download/@simatic-ax/simple-control-modules/0.0.5/aa0814e7b96053af27d2461d1be92e6cf055da1ff26769307e88a9b59efb67c8#819341f1768a3da9faaa6ad101a74854dba85996"
-  integrity sha512-I62E9twABPiWKnwNFEmuT/Nnz6V4J51rTMCy8vYaqOjf+9q7PTpiiG5DYYHJLYcnY9jZ8nPWop+9wiKK5OnFpw==
+"@simatic-ax/simple-control-modules@0.1.0":
+  version "0.1.0"
+  resolved "https://npm.pkg.github.com/download/@simatic-ax/simple-control-modules/0.1.0/5790f5e9822898a36fad6337a01575e2f47d95a2a315456015363c9abebad0b2#01b07545c4e7146522ce6d7ea7cd6f40ba0a79d3"
+  integrity sha512-y6K0240zSX8/9Purjoi2kI3YDq+OkihgXuzKjDU552T82XkbMoySe4mDpNV8hC+LSmmTtVOxlz9rY48zopIeuA==
   dependencies:
     "@simatic-ax/io" "0.1.2"
 
@@ -387,10 +387,10 @@
   resolved "https://npm.pkg.github.com/download/@simatic-ax/snippetscollection/0.0.6/0c5dfb121a478816973432d8fefd7c4868da78031f8fe12eeacb067e6a7656b4#9bfb71c62d44e7b95ab0798e9ac46366290884fc"
   integrity sha512-BohhLC7n3pHP5QRPaNXbt0tQXNgGKvuWBsohJ+Jzj+tgOU9o6K6i6l8CHaTsFev5Lq0I08jRyfIdCJ/gfJy+BA==
 
-"@simatic-ax/windowtracking@0.0.11":
-  version "0.0.11"
-  resolved "https://npm.pkg.github.com/download/@simatic-ax/windowtracking/0.0.11/50900b19e0a6e1d808aabe4f97e6de648a322f569b6f7645563595bb0dcbb4ac#6c491c2e4a54ac8d43e515260900e4bd8dccdd39"
-  integrity sha512-VATB46nIKgY3USdC0vIPY1tWH1EhRXKTOalGoGPyI2jbImqQzZusbRY/4Z8ZJZdlkteokEQk0QrVplILscslYw==
+"@simatic-ax/windowtracking@0.1.0":
+  version "0.1.0"
+  resolved "https://npm.pkg.github.com/download/@simatic-ax/windowtracking/0.1.0/7a3d6619cdd13c93d381515dee2c53a24f67f71cc6bc9cb3262d1630ff18dd97#b0109f2e133e7573d9cfefc6581a4ddd48d0bbd8"
+  integrity sha512-na0Zv4h+hGkAdMKDYA2FI+GX0gXTQ1bJxS+UbvMSr8FLjhK7wC6i1l3D6ncmL3Kksifj5nATd/pRYNzGmYbG8Q==
   dependencies:
     "@simatic-ax/collections" "0.1.1"
-    "@simatic-ax/simple-control-modules" "0.0.5"
+    "@simatic-ax/simple-control-modules" "0.1.0"

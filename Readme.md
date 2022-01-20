@@ -1,8 +1,7 @@
 # Sorting Line Application Example
 
 ## Description
-Sorting line with a 
-by using the library `Window Tracking` 
+Sorting line by using the library `WindowTracking` 
 
 ### Layout
 
