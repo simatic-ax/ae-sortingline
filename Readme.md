@@ -30,7 +30,24 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
 
 
 ## Execute the Application Example (AX Code local)
-1. If not open, open a terminal (`CTRL+SHIFT+ö`)
+
+> to use this application example you need to login into the GitHub registry. You'll find more information [here](https://github.com/simatic-ax/.github/blob/main/doc/personalaccesstoken.md) 
+
+1. Open a CLI and switch to the target folder like:
+      ```cli
+      D:
+      cd \Git
+      ```
+1. Clone the repository and open `AX Code`
+
+1. 
+      ```
+      git clone git@github.com:simatic-ax/ae-sortingline.git
+      cd ae-sortingline 
+      AxCode .
+      ```
+1. If it is not open, open a terminal in `AX Code` (`CTRL+SHIFT+ö`)
+   
 1. Start a PLCSIM Advanced Instance (IP: Address 192.168.0.1). To change the IP you'll find information [here](#tips-and-tricks)
 
 1. Install dependencies (if not yet done)
@@ -56,19 +73,20 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
    
    1. Download to a PLCSIM Advanced
    
-   ```cli
-   apax dlsim
-   ```
+         ```cli
+         apax dlsim
+         ```
 
     1. Download to a real hardware PLC
 
-   ```cli
-   apax dlhwplc
-   ```
+         ```cli
+         apax dlhwplc
+         ```
 
    The project will be compiled and downloaded to the PLCSIM Advanced instance
    
 1. Open the monitoring file mon.mon
+
 1. Go online
 
     ![](doc/goonline.png)
