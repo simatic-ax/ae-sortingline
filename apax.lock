@@ -387,10 +387,10 @@
   resolved "https://npm.pkg.github.com/download/@simatic-ax/snippetscollection/0.0.6/0c5dfb121a478816973432d8fefd7c4868da78031f8fe12eeacb067e6a7656b4#9bfb71c62d44e7b95ab0798e9ac46366290884fc"
   integrity sha512-BohhLC7n3pHP5QRPaNXbt0tQXNgGKvuWBsohJ+Jzj+tgOU9o6K6i6l8CHaTsFev5Lq0I08jRyfIdCJ/gfJy+BA==
 
-"@simatic-ax/windowtracking@0.1.0":
-  version "0.1.0"
-  resolved "https://npm.pkg.github.com/download/@simatic-ax/windowtracking/0.1.0/7a3d6619cdd13c93d381515dee2c53a24f67f71cc6bc9cb3262d1630ff18dd97#b0109f2e133e7573d9cfefc6581a4ddd48d0bbd8"
-  integrity sha512-na0Zv4h+hGkAdMKDYA2FI+GX0gXTQ1bJxS+UbvMSr8FLjhK7wC6i1l3D6ncmL3Kksifj5nATd/pRYNzGmYbG8Q==
+"@simatic-ax/windowtracking@0.1.1":
+  version "0.1.1"
+  resolved "https://npm.pkg.github.com/download/@simatic-ax/windowtracking/0.1.1/74b0f0171e04b9da7aa30debc4dbfe676a68762b25acd1176264840f4ab43327#137289524befd25a0d0978da794a975f1ef67ad3"
+  integrity sha512-oFWKaOQZu46HEKh62byYebB1uSzcRcuXlzasJULshbRJEHYZDTpfBitnciUiYOQg2NggbcAhQNByXIW0DJRTgA==
   dependencies:
     "@simatic-ax/collections" "0.1.1"
     "@simatic-ax/simple-control-modules" "0.1.0"
