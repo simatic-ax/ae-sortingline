@@ -31,7 +31,7 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
 
 ## Execute the Application Example (AX Code local)
 
-> to use this application example you need to login into the GitHub registry. You'll find more information [here](https://github.com/simatic-ax/.github/blob/main/doc/personalaccesstoken.md) 
+> to use this application example you need to login into the GitHub registry. You'll find more information [here](https://github.com/simatic-ax/.sharedstuff/blob/main/doc/personalaccesstoken.md) 
 
 1. Open a CLI and switch to the target folder like:
       ```cli
