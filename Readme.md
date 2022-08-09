@@ -42,9 +42,8 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
 
       Run the following commands in a CLI
       ```sh
-      apax create @simatic-ax/ae-sortingline --registry https://npm.pkg.github.com ae-trafficlight
-      cd ae-trafficlight 
-      axcode .
+      apax create @simatic-ax/ae-sortingline --registry https://npm.pkg.github.com ae-sortingline
+      axcode ae-sortingline 
       ```
       
 1. If it is not open, open a terminal in `AX Code` (`CTRL+SHIFT+ö`)
