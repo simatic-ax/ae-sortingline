@@ -38,14 +38,15 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
       D:
       cd \Git
       ```
-1. Clone the repository and open `AX Code`
+1. Install the application example on your local PC
 
-1. 
+      Run the following commands in a CLI
+      ```sh
+      apax create @simatic-ax/ae-sortingline --registry https://npm.pkg.github.com ae-trafficlight
+      cd ae-trafficlight 
+      axcode .
       ```
-      git clone git@github.com:simatic-ax/ae-sortingline.git
-      cd ae-sortingline 
-      AxCode .
-      ```
+      
 1. If it is not open, open a terminal in `AX Code` (`CTRL+SHIFT+ö`)
    
 1. Start a PLCSIM Advanced Instance (IP: Address 192.168.0.1). To change the IP you'll find information [here](#tips-and-tricks)
