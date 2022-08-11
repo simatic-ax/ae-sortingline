@@ -1,4 +1,4 @@
-USING Simatic.Ax.WindowTracking.ExitPointHandler;
+USING Simatic.Ax.WindowTracking;
 
 CLASS MyExitPoint IMPLEMENTS IExitPointHandler
     VAR

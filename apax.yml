@@ -1,5 +1,5 @@
 name: ae-sortingline
-version: 0.0.0
+version: 0.0.0-placeholder
 type: app
 targets:
   - "plcsim"
@@ -29,10 +29,10 @@ scripts:
     - apax build
     - apax load
 devDependencies:
-  "@ax/sdk": 1.0.127
-  "@simatic-ax/snippetscollection": 0.0.6
-  "@ax/hwld": 0.4.93
+  "@ax/sdk": 2.0.3
+  "@simatic-ax/snippetscollection": 0.0.13
+  "@ax/hwld": 0.4.98
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 dependencies:
-  "@simatic-ax/windowtracking": 0.1.1
+  "@simatic-ax/windowtracking": 1.0.0

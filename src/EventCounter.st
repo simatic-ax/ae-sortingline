@@ -1,6 +1,5 @@
-USING Simatic.Ax.WindowTracking.Trigger;
-USING Simatic.Ax.WindowTracking.WindowTracking;
-USING Simatic.Ax.WindowTracking.EventHandler;
+USING Simatic.Ax.WindowTracking;
+
 
 CLASS MyEventCounter IMPLEMENTS IUserDefinedEvent
     VAR

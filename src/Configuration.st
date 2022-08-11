@@ -1,8 +1,4 @@
-USING Simatic.Ax.WindowTracking.SortDecision;
 USING Simatic.Ax.WindowTracking;
-USING Simatic.Ax.WindowTracking.Trigger;
-USING Simatic.Ax.WindowTracking.EventHandler;
-USING Simatic.Ax.WindowTracking.Items;
 
 CONFIGURATION MyConfiguration
     TASK Main(Priority := 1);
