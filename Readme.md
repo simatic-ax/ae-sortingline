@@ -1,13 +1,15 @@
 # Sorting Line Application Example
 
 ## Description
-Sorting line by using the library `WindowTracking` 
+
+Sorting line by using the library `WindowTracking`
 
 ### Layout
 
 This example shows a small example of a sorting line with 4 exits.
 
-![](./doc/linelayout.png)
+![Schematic overview of the line setup](./doc/linelayout.png)
+
 ### How does it work
 
 In this example every second, a `TransportWindow` will be created and one of 16 items in a list will be assigned to this window. Each item has one sort destination (exit point).
@@ -17,44 +19,47 @@ During the execution, a encoder will be simulated. This encoder will be incremen
 The `TransportWindow` will be moved according the encoder values. When a `TransportWindow` reaches a `VirtualTrigger`, it will be activated and the event handler which belongs to the `VirtualTrigger`, will be executed.
 
 1. If the event handler is a `SortDecisionEvent`:
-    
+
     The `SortDecisionEvent` check, if the assigned item in the `TransportWindow` is designated for the active `TriggerPoint`.
-    
+
     If yes, the exit handler of the `SortDecisionEvent` will be executed. In your application, you've to implement your own exit handler (e.g. if the exit is another conveyor, it has to be startup).
 
-    If not, nothing happened. 
+    If not, nothing happened.
 
-1. If the event handler is a `TerminateWindowEvent`: 
+1. If the event handler is a `TerminateWindowEvent`:
 
-    In this case, the TransportWindow will be terminated. That has to be done at the end of the sorting line. 
-
+    In this case, the TransportWindow will be terminated. That has to be done at the end of the sorting line.
 
 ## Execute the Application Example (AX Code local)
 
-> to use this application example you need to login into the GitHub registry. You'll find more information [here](https://github.com/simatic-ax/.github/blob/main/docs/personalaccesstoken.md) 
+> to use this application example you need to login into the GitHub registry. You'll find more information [here](https://github.com/simatic-ax/.github/blob/main/docs/personalaccesstoken.md)
 
 1. Open a CLI and switch to the target folder like:
+
       ```cli
       D:
       cd \Git
       ```
+
 1. Install the application example on your local PC
 
       Run the following commands in a CLI
+
       ```sh
       apax create @simatic-ax/ae-sortingline --registry https://npm.pkg.github.com ae-sortingline
       axcode ae-sortingline 
       ```
-      
+
 1. If it is not open, open a terminal in `AX Code` (`CTRL+SHIFT+ö`)
-   
+
 1. Start a PLCSIM Advanced Instance (IP: Address 192.168.0.1). To change the IP you'll find information [here](#tips-and-tricks)
 
 1. Install dependencies (if not yet done)
-   
+
    ```cli
    apax install -L
    ```
+
 1. Update your dependencies (optionally)
 
    ```cli
@@ -62,7 +67,7 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
    ```
 
 1. If not done download a HWCN with the command:
-   
+
    ```cli
    apax loadhwcn
    ```
@@ -70,30 +75,30 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
    Result: a predefined HWCN from the folder `hwcn` will be downloaded. If the predefined HWCN (CPU 1516, FW2.8) is not compatible with your device, you've to create your own HWCN with TIA Portal and download it to the PLC/PLCSIM.
 
 1. Build in download the project to the PLC
-   
+
    1. Download to a PLCSIM Advanced
-   
+
          ```cli
          apax dlsim
          ```
 
-    1. Download to a real hardware PLC
+   1. Download to a real hardware PLC
 
          ```cli
          apax dlhwplc
          ```
 
    The project will be compiled and downloaded to the PLCSIM Advanced instance
-   
+
 1. Open the monitoring file mon.mon
 
 1. Go online
 
-    ![](doc/goonline.png)
+    ![Icon for going online on the PLC](doc/goonline.png)
 
 1. Watch the values
-   
-   ![](doc/mon-file.png)
+
+   ![Example for monitoring values online](doc/mon-file.png)
 
 ## Tips and tricks
 
