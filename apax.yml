@@ -31,7 +31,7 @@ scripts:
 devDependencies:
   "@ax/sdk": 3.0.2
   "@simatic-ax/snippetscollection": 0.0.13
-  "@ax/hwld": 0.4.98
+  "@ax/hwld": 0.8.23
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 dependencies:
