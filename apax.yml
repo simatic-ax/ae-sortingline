@@ -29,7 +29,7 @@ scripts:
     - apax build
     - apax load
 devDependencies:
-  "@ax/sdk": 2311.0.1
+  "@ax/sdk": 2311.1.2
   "@simatic-ax/snippetscollection": 0.0.13
   "@ax/hwld": 0.8.23
 registries:
