@@ -2,37 +2,28 @@ name: ae-sortingline
 version: 0.0.0-placeholder
 type: app
 targets:
-  - "plcsim"
   - "1500"
+  - "llvm"
 variables:
   APAX_BUILD_ARGS:
     - --debug
     - --log Trace
-  BIN_FOLDER: "./bin/plcsim"
-  BIN_FOLDER_HWPLC: "./bin/1500"
+  BIN_FOLDER: "./bin/1500"
   IP_ADDRESS: "192.168.0.1"
   WATCHLISTS: "./watchlist"
 scripts:
-  load: sld -i $BIN_FOLDER -t $IP_ADDRESS -r --accept-security-disclaimer -l debug
-    --default-server-interface
-  loadhwplc: sld -i $BIN_FOLDER_HWPLC -t $IP_ADDRESS -r
-    --accept-security-disclaimer -l debug --default-server-interface
-  reset: apax hwld --resetPlc:keepOnlyIP --targetIP $IP_ADDRESS
-    --accept-security-disclaimer
-  loadhwcn: apax hwld --input ./hwcn/MMC --targetIP $IP_ADDRESS
-    --accept-security-disclaimer
+  load: sld -i $BIN_FOLDER -t $IP_ADDRESS -r --accept-security-disclaimer -l debug --default-server-interface
+  reset: apax hwld --resetPlc:keepOnlyIP --targetIP $IP_ADDRESS --accept-security-disclaimer
+  loadhwcn: apax hwld --input ./hwcn/MMC --targetIP $IP_ADDRESS --accept-security-disclaimer
   watch: apax mon  -t $IP_ADDRESS -f ./watchfiles/mon.mon -c
   dlsim:
     - apax build
     - apax load
-  dlhwplc:
-    - apax build
-    - apax load
 devDependencies:
-  "@ax/sdk": 2311.0.1
-  "@simatic-ax/snippetscollection": 0.0.13
-  "@ax/hwld": 0.8.23
+  "@ax/sdk": 2405.0.0
+  "@simatic-ax/snippetscollection": 1.0.0
+  "@ax/hwld": 1.0.75
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 dependencies:
-  "@simatic-ax/windowtracking": 1.0.0
+  "@simatic-ax/windowtracking": 3.0.0
