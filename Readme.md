@@ -48,8 +48,8 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
       ```sh
       apax create @simatic-ax/ae-sortingline --registry https://npm.pkg.github.com ae-sortingline 
       ```
-      
-      ```
+
+      ```sh
       cd ae-sortingline 
       ```
 
@@ -76,11 +76,10 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
    ```
 
 1. Build and download the program to a PLC
-   
-         ```cli
-         apax dlplc
-         ```
 
+   ```cli
+   apax dlplc
+   ```
 
    The project will be compiled and downloaded to the PLCSIM Advanced instance
 
