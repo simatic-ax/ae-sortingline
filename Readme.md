@@ -38,7 +38,7 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
 
       ```cli
       D:
-      cd \Git
+      cd \temp
       ```
 
 1. Install the application example on your local PC
@@ -46,19 +46,28 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
       Run the following commands in a CLI
 
       ```sh
-      apax create @simatic-ax/ae-sortingline --registry https://npm.pkg.github.com ae-sortingline
-      axcode ae-sortingline 
+      apax create @simatic-ax/ae-sortingline --registry https://npm.pkg.github.com ae-sortingline 
+      ```
+      
+      ```
+      cd ae-sortingline 
+      ```
+
+      install the dependencies with:
+
+      ```sh
+      apax install
+      ```
+
+      and open AxCode
+
+      ```sh
+      axcode . 
       ```
 
 1. If it is not open, open a terminal in `AX Code` (`CTRL+SHIFT+ö`)
 
 1. Start a PLCSIM Advanced Instance (IP: Address 192.168.0.1). To change the IP you'll find information [here](#tips-and-tricks)
-
-1. Install dependencies (if not yet done)
-
-   ```cli
-   apax install -L
-   ```
 
 1. Update your dependencies (optionally)
 
@@ -66,27 +75,12 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
    apax update -a
    ```
 
-1. If not done download a HWCN with the command:
-
-   ```cli
-   apax loadhwcn
-   ```
-
-   Result: a predefined HWCN from the folder `hwcn` will be downloaded. If the predefined HWCN (CPU 1516, FW2.8) is not compatible with your device, you've to create your own HWCN with TIA Portal and download it to the PLC/PLCSIM.
-
-1. Build in download the project to the PLC
-
-   1. Download to a PLCSIM Advanced
-
+1. Build and download the program to a PLC
+   
          ```cli
-         apax dlsim
+         apax dlplc
          ```
 
-   1. Download to a real hardware PLC
-
-         ```cli
-         apax dlhwplc
-         ```
 
    The project will be compiled and downloaded to the PLCSIM Advanced instance
 
