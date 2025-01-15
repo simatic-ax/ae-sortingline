@@ -22,7 +22,7 @@ scripts:
 devDependencies:
   "@ax/sdk": 2405.0.0
   "@simatic-ax/snippetscollection": 1.0.0
-  "@ax/hwld": 1.0.75
+  "@ax/hwld": 1.1.187
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 dependencies:
