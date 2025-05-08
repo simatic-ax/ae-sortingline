@@ -8,7 +8,7 @@ Sorting line by using the library `WindowTracking`
 
 This example shows a small example of a sorting line with 4 exits.
 
-![Schematic overview of the line setup](./doc/linelayout.png)
+![Schematic overview of the line setup](./docs/linelayout.png)
 
 ### How does it work
 
@@ -87,11 +87,11 @@ The `TransportWindow` will be moved according the encoder values. When a `Transp
 
 1. Go online
 
-    ![Icon for going online on the PLC](doc/goonline.png)
+    ![Icon for going online on the PLC](docs/goonline.png)
 
 1. Watch the values
 
-   ![Example for monitoring values online](doc/mon-file.png)
+   ![Example for monitoring values online](docs/mon-file.png)
 
 ## Tips and tricks
 
