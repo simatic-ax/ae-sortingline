@@ -3,6 +3,9 @@
 # here you can define the content
 
 files:
+  - .gitignore
+  - .gitattributes
+  - .vscode
   - docs
   - src
   - test
