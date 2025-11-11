@@ -1,5 +1,6 @@
 name: ae-sortingline
 version: 0.0.0-placeholder
+description: "Application example demonstrating a sorting line with 4 exits using the WindowTracking library"
 type: app
 targets:
   - "1500"
