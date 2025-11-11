@@ -2,29 +2,29 @@ name: ae-sortingline
 version: 0.0.0-placeholder
 type: app
 targets:
-  - "1500"
-  - "llvm"
+- '1500'
+- llvm
 variables:
   APAX_BUILD_ARGS:
-    - --debug
-    - --log Trace
-  BIN_FOLDER: "./bin/1500"
-  IP_ADDRESS: "192.168.0.1"
-  WATCHLISTS: "./watchlist"
-# Apax scripts
+  - --debug
+  - --log Trace
+  BIN_FOLDER: ./bin/1500
+  IP_ADDRESS: 192.168.0.1
+  WATCHLISTS: ./watchlist
 scripts:
-  # call 'apax load' to download the builded program to the target. An 'apax build' might be required upfront
-  load: apax sld load --input $BIN_FOLDER --target $IP_ADDRESS --restart --accept-security-disclaimer --log debug
-  # call 'apax dlplc' to build and download the application to the target
+  load: apax sld load --input $BIN_FOLDER --target $IP_ADDRESS --restart --accept-security-disclaimer
+    --log debug
   dlplc:
-    - apax build
-    - apax load
+  - apax build
+  - apax load
 devDependencies:
-  "@ax/sdk": ^2504.0.0
-  "@simatic-ax/snippetscollection": ^1.0.0
+  '@ax/sdk': ^2504.0.0
+  '@simatic-ax/snippetscollection': ^1.0.0
 registries:
-  '@simatic-ax': 'https://npm.pkg.github.com/'
+  '@simatic-ax': https://npm.pkg.github.com/
 dependencies:
-  "@simatic-ax/windowtracking": ^5.0.0
+  '@simatic-ax/windowtracking': ^5.0.0
 catalogs:
-  "@ax/simatic-ax": ^2504.0.0
+  '@ax/simatic-ax': ^2504.0.0
+description: Application example demonstrating a sorting line with 4 exits using the
+  WindowTracking library
