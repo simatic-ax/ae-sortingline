@@ -1,5 +1,6 @@
 name: ae-sortingline
 version: 0.0.0-placeholder
+description: "Application example demonstrating a sorting line with 4 exits using the WindowTracking library"
 type: app
 targets:
   - "1500"
@@ -19,12 +20,16 @@ scripts:
   dlplc:
     - apax build
     - apax load
+publicKeys:
+  "@simatic-ax":
+    "v1": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+    "v2": "7af3e394eb2b285a3d99ab8e1f745cc6db75704b30a80393339c721a92ffffd9"
+catalogs:
+  "@ax/simatic-ax": ^2510.0.0
 devDependencies:
-  "@ax/sdk": ^2504.0.0
-  "@simatic-ax/snippetscollection": ^1.0.0
+  "@ax/sdk": ^2510.0.0
+  "@simatic-ax/snippetscollection": ^1.1.0
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 dependencies:
-  "@simatic-ax/windowtracking": ^5.0.0
-catalogs:
-  "@ax/simatic-ax": ^2504.0.0
+  "@simatic-ax/windowtracking": ^6.0.1
