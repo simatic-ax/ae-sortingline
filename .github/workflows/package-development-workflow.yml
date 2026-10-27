@@ -25,7 +25,7 @@ jobs:
     name: Build and Test
     runs-on: ubuntu-24.04
     container:
-      image: ghcr.io/simatic-ax/ci-images/apax-ci-image:4.3.0
+      image: ghcr.io/simatic-ax/ci-images/apax-ci-image:4.4.0
       credentials:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
@@ -48,7 +48,7 @@ jobs:
           immutable: true
 
       - name: Build source code
-        uses: simatic-ax/actions/apax-build@v4
+        uses: simatic-ax/actions/apax-make@v4
 
       - name: Test source code
         uses: simatic-ax/actions/apax-test@v4
